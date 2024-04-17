@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graf.xml"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/expensesFragment"
+        android:name="com.saliev1353.digitalforwarder.ui.fragment.ExpensesFragment"
+        android:label="fragment_expenses"
+        tools:layout="@layout/fragment_expenses" />
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.saliev1353.digitalforwarder.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/providerFragment"
+        android:name="com.saliev1353.digitalforwarder.ui.fragment.ProviderFragment"
+        android:label="fragment_provider"
+        tools:layout="@layout/fragment_provider" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.saliev1353.digitalforwarder.ui.fragment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
