@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -49,6 +51,32 @@ dependencies {
     // Kotlin
     implementation libs.androidx.navigation.fragment.ktx
     implementation libs.androidx.navigation.ui.ktx
+
+    //Retrofit
+    implementation libs.retrofit
+    implementation libs.converter.gson
+
+    //Glide
+    implementation libs.glide
+
+    //Dagger Hilt
+    implementation "com.google.dagger:hilt-android:2.48"
+    kapt "com.google.dagger:hilt-compiler:2.48"
+
+    //Lifecycle
+    implementation libs.androidx.lifecycle.livedata.ktx
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+
+    implementation "androidx.core:core-splashscreen:1.0.0"
+
+
+    //OkHttpClient
+    implementation(platform(libs.okhttp.bom))
+    // define any required OkHttp artifacts without version
+    //noinspection UseTomlInstead
+    implementation'com.squareup.okhttp3:okhttp'
+    //noinspection UseTomlInstead
+    implementation'com.squareup.okhttp3:logging-interceptor'
 
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat

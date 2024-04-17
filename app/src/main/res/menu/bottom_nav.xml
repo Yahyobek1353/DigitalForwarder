@@ -7,8 +7,8 @@
         android:title="Главный Экран"
         app:showAsAction="never"
         android:icon="@drawable/business_home"
-
         />
+
     <item
         android:id="@+id/expensesFragment"
         android:title="Отчёты"
@@ -24,7 +24,7 @@
 
 
     <item
-        android:id="@+id/profileFragment"
+        android:id="@+id/settingsFragment"
         android:title="Настройки"
         app:showAsAction="never"
         android:icon="@drawable/settings"
