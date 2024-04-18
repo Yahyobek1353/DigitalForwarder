@@ -6,6 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.saliev1353.digitalforwarder.R
+import com.saliev1353.digitalforwarder.data.model.home.CategoryDto
+import com.saliev1353.digitalforwarder.data.model.home.FilialDto
+import com.saliev1353.digitalforwarder.databinding.FragmentHomeBinding
+import com.saliev1353.digitalforwarder.ui.other.adapter.category.CategoryAdapter
+import com.saliev1353.digitalforwarder.ui.other.adapter.filial.FilialsAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,16 +23,49 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private val binding : FragmentHomeBinding by lazy{
+        FragmentHomeBinding.inflate(layoutInflater)
+    }
+    private val adapter : FilialsAdapter by lazy { FilialsAdapter() }
+    private val categoryAdapter : CategoryAdapter by lazy { CategoryAdapter() }
+    private val itemList = listOf(
+        FilialDto( "Globus"),
+        FilialDto( "Oazis"),
+        FilialDto( "Market"),
+        FilialDto( "Wildberries"),
+        FilialDto( "Frunze"),
+        FilialDto( "Арзан"),
+        FilialDto( "Кайырма"),
+        FilialDto( "Globus Osh"),
+        FilialDto( "Globus Nokat"),
+        FilialDto( "Alibaba"),
+        FilialDto( "Ali express"),
+        FilialDto( "Faberlic"),
+    )
+
+    val categoryList = listOf(
+        CategoryDto("Напитки"),
+        CategoryDto("Малочная продукция"),
+        CategoryDto("Мясное"),
+        CategoryDto("Фрукты"),
+        CategoryDto("Овощи"),
+        CategoryDto("ягоды"),
+        CategoryDto("Моющие"),
+        CategoryDto("Для красоты"),
+        CategoryDto("Грибное"),
+        CategoryDto("Орехи"),
+        CategoryDto("Рыбопродукты"),
+        CategoryDto("Хлебобулочные изделия"),
+        CategoryDto("Пищевые жиры"),
+        CategoryDto("Макаронные изделия"),
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        binding.rvBranches.adapter = adapter
+        adapter.submitList(itemList)
+        binding.rvCategory.adapter = categoryAdapter
+        categoryAdapter.submitList(categoryList)
     }
 
     override fun onCreateView(
@@ -35,26 +73,8 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+
 }

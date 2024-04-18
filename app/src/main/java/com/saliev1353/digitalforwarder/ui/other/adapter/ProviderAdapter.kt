@@ -1,4 +1,4 @@
-package com.saliev1353.digitalforwarder.ui.adapter
+package com.saliev1353.digitalforwarder.ui.other.adapter
 
 
 import android.view.ViewGroup
@@ -9,7 +9,9 @@ import com.saliev1353.digitalforwarder.data.model.provider.ProviderDto
 import com.saliev1353.digitalforwarder.databinding.ActivityMainBinding
 import com.saliev1353.digitalforwarder.databinding.ItemProviderBinding
 
-class ProviderAdapter : ListAdapter<ProviderDto, ProviderAdapter.ProviderViewHolder>(ProviderDiffUtill()) {
+class ProviderAdapter : ListAdapter<ProviderDto, ProviderAdapter.ProviderViewHolder>(
+    ProviderDiffUtill()
+) {
     inner class ProviderViewHolder(private val binding: ItemProviderBinding) : ViewHolder(binding.root) {
 
     }

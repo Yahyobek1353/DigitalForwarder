@@ -14,10 +14,10 @@
         android:theme="@style/Theme.DigitalForwarder"
         tools:targetApi="31">
         <activity
-            android:name=".ui.reg.RegisterActivity"
+            android:name=".ui.activity.reg.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name=".ui.activity.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
