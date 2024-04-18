@@ -34,7 +34,6 @@ class OnBoardAdapter : RecyclerView.Adapter<OnBoardAdapter.BoardViewHolder>() {
             binding.imgOnBoard.setImageResource(img[pos])
             binding.txtDesc.text = desc[pos]
             binding.txtTitle.text = title[pos]
-
         }
     }
 
