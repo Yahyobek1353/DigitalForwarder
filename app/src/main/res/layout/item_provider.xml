@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/bg_item"
     android:layout_margin="20dp"
+    android:elevation="4dp"
     android:padding="10dp"
     android:layout_height="wrap_content">
 
@@ -17,6 +18,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
 
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,10 +31,12 @@
         android:text="FirstName"
         android:textColor="@color/black"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/item_last_name"/>
+        app:layout_constraintTop_toBottomOf="@id/item_last_name" />
 
     <TextView
+        android:id="@+id/tel_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="18dp"
@@ -40,18 +44,10 @@
         android:text="tel number"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/item_first_name"/>
-
-    <ImageView
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:src="@drawable/ic_launcher_background"
-        android:scaleType="centerCrop"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_first_name" />
+
 
 
 

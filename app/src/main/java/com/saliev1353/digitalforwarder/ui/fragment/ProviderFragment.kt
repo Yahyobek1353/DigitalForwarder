@@ -6,55 +6,44 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.saliev1353.digitalforwarder.R
+import com.saliev1353.digitalforwarder.data.model.home.CategoryDto
+import com.saliev1353.digitalforwarder.data.model.provider.ProviderDto
+import com.saliev1353.digitalforwarder.databinding.FragmentProviderBinding
+import com.saliev1353.digitalforwarder.ui.other.adapter.ProviderAdapter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ProviderFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProviderFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private val adapter : ProviderAdapter by lazy {
+        ProviderAdapter()
+    }
+    private val binding : FragmentProviderBinding by lazy {
+        FragmentProviderBinding.inflate(layoutInflater)
+    }
+    val providerList = listOf(
+        ProviderDto("Яхёбек", "Салиев" , "+996 990 05 54 45"),
+        ProviderDto("Урмат", "Асаналиев" , "+996 990 05 54 45"),
+        ProviderDto("Абдулазиз", "Сабиров" , "+996 990 05 54 45"),
+        ProviderDto("Улан", "Аширов" , "+996 990 05 54 45"),
+        ProviderDto("Арсен", "Сеня" , "+996 990 05 54 45"),
+        ProviderDto("Бекзад", "Базарбаев" , "+996 990 05 54 45"),
+        ProviderDto("Эрлан", "Самиев" , "+996 990 05 54 45"),
+        ProviderDto("Азиз", "Ахмедов" , "+996 990 05 54 45"),
+        ProviderDto("Абдулло", "Сабиржанов" , "+996 990 05 54 45"),
+        ProviderDto("Али", "Алимов" , "+996 990 05 54 45"),
+        ProviderDto("Сайфулло", "Алимов" , "+996 990 05 54 45"),
+        ProviderDto("Бексултан", "Султанов" , "+996 990 05 54 45"),
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        binding.rvProvider.adapter = adapter
+        adapter.submitList(providerList)
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_provider, container, false)
+    ): View {
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ProviderFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ProviderFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }

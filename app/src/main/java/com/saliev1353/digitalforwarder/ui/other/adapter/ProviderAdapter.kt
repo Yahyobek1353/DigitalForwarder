@@ -1,27 +1,32 @@
 package com.saliev1353.digitalforwarder.ui.other.adapter
 
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.saliev1353.digitalforwarder.data.model.provider.ProviderDto
-import com.saliev1353.digitalforwarder.databinding.ActivityMainBinding
 import com.saliev1353.digitalforwarder.databinding.ItemProviderBinding
 
 class ProviderAdapter : ListAdapter<ProviderDto, ProviderAdapter.ProviderViewHolder>(
     ProviderDiffUtill()
 ) {
     inner class ProviderViewHolder(private val binding: ItemProviderBinding) : ViewHolder(binding.root) {
-
+        fun onBind(it: ProviderDto) {
+            binding.itemFirstName.text = it.firstName
+            binding.itemLastName.text = it.lastName
+            binding.telNumber.text = it.number
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProviderViewHolder {
-        TODO("Not yet implemented")
+        return ProviderViewHolder(ItemProviderBinding.inflate(LayoutInflater.from(parent.context) , parent,false))
     }
 
     override fun onBindViewHolder(holder: ProviderViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val providerModel = getItem(position)
+        holder.onBind(providerModel)
     }
 }
 
