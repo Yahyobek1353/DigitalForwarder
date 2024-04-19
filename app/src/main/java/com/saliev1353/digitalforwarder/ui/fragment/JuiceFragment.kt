@@ -1,29 +1,23 @@
 package com.saliev1353.digitalforwarder.ui.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.saliev1353.digitalforwarder.databinding.FragmentExpensesBinding
+import androidx.fragment.app.Fragment
+import com.saliev1353.digitalforwarder.R
 
-class ExpensesFragment : Fragment() {
-    private val binding : FragmentExpensesBinding by lazy {
-        FragmentExpensesBinding.inflate(layoutInflater)
-    }
+class JuiceFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        return binding.root
+    ): View? {
+        return inflater.inflate(R.layout.fragment_juice, container, false)
     }
 
 }
