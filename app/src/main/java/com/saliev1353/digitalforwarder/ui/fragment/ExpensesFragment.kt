@@ -17,6 +17,7 @@ class ExpensesFragment : Fragment() {
         FragmentExpensesBinding.inflate(layoutInflater)
     }
     private val resultList = listOf(
+        PriceDto("За Февраль : ", "29,000сом" , "14,000coм" , "15,000сом"),
         PriceDto("За Апрель : ", "30,000сом" , "14,000coм" , "16,000сом"),
         PriceDto("За Март : ", "34,000сом" , "15,000сом" , "18,000сом")
     )
