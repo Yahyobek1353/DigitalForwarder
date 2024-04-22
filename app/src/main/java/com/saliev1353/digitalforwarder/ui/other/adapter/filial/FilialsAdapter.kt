@@ -14,6 +14,7 @@ ProviderDiffUtill()
     inner class FilialsViewHolder(private val binding: ItemFilialsBinding) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(it : FilialDto?){
             binding.filialsName.text = it?.name
+            binding.filialAdress.text = it?.adress
         }
     }
 

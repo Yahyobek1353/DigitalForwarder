@@ -19,18 +19,18 @@ class HomeFragment : Fragment() {
     private val adapter : FilialsAdapter by lazy { FilialsAdapter() }
     private val categoryAdapter : CategoryAdapter by lazy { CategoryAdapter() }
     private val itemList = listOf(
-        FilialDto( "Globus"),
-        FilialDto( "Oazis"),
-        FilialDto( "Market"),
-        FilialDto( "Wildberries"),
-        FilialDto( "Frunze"),
-        FilialDto( "Арзан"),
-        FilialDto( "Кайырма"),
-        FilialDto( "Globus Osh"),
-        FilialDto( "Globus Nokat"),
-        FilialDto( "Alibaba"),
-        FilialDto( "Ali express"),
-        FilialDto( "Faberlic"),
+        FilialDto( "Globus" ,"адрес"),
+        FilialDto( "Oazis", "адрес"),
+        FilialDto( "Market","адрес"),
+        FilialDto( "Wildberries", "адрес"),
+        FilialDto( "Frunze", "адрес"),
+        FilialDto( "Арзан", "адрес"),
+        FilialDto( "Кайырма", "адрес"),
+        FilialDto( "Globus Osh", "адрес"),
+        FilialDto( "Globus Nokat", "адрес"),
+        FilialDto( "Alibaba", "адрес"),
+        FilialDto( "Ali express", "адрес"),
+        FilialDto( "Faberlic" , "адрес"),
     )
 
     private val categoryList = listOf(
