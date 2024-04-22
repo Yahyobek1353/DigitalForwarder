@@ -22,8 +22,8 @@ CategoryDiffUtill()
     }
 
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
-        val CategoryModel = getItem(position)
-        holder.onBind(CategoryModel)
+        val model = getItem(position)
+        holder.onBind(model)
     }
 }
 

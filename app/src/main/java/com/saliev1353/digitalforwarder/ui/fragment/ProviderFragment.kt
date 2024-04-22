@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.saliev1353.digitalforwarder.R
-import com.saliev1353.digitalforwarder.data.model.home.CategoryDto
 import com.saliev1353.digitalforwarder.data.model.provider.ProviderDto
 import com.saliev1353.digitalforwarder.databinding.FragmentProviderBinding
 import com.saliev1353.digitalforwarder.ui.other.adapter.ProviderAdapter
@@ -18,7 +16,7 @@ class ProviderFragment : Fragment() {
     private val binding : FragmentProviderBinding by lazy {
         FragmentProviderBinding.inflate(layoutInflater)
     }
-    val providerList = listOf(
+    private val providerList = listOf(
         ProviderDto("Яхёбек", "Салиев" , "+996 990 05 54 45"),
         ProviderDto("Урмат", "Асаналиев" , "+996 990 05 54 45"),
         ProviderDto("Абдулазиз", "Сабиров" , "+996 990 05 54 45"),

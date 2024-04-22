@@ -1,5 +1,6 @@
 package com.saliev1353.digitalforwarder.ui.activity.splash
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -11,11 +12,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.saliev1353.digitalforwarder.R
 import com.saliev1353.digitalforwarder.ui.activity.MainActivity
-import com.saliev1353.digitalforwarder.ui.onBoard.OnBoardFragment
 import com.saliev1353.digitalforwarder.ui.other.adapter.ext.mainIntent
 
+const val time : Long = 2000
+@Suppress("DEPRECATION")
+@SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
-    private val SPLASH_SCREEN_TIME : Long = 1000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
@@ -32,7 +35,7 @@ class SplashActivity : AppCompatActivity() {
         Handler(Looper.myLooper()!!).postDelayed({
             mainIntent(MainActivity())
             finish()
-        }, SPLASH_SCREEN_TIME)
+        }, time)
     }
 
 

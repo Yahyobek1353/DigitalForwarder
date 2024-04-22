@@ -1,29 +1,27 @@
 package com.saliev1353.digitalforwarder.ui.other.adapter.onBoard
 
-import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.saliev1353.digitalforwarder.R
 import com.saliev1353.digitalforwarder.databinding.ItemOnBoardBinding
-import com.saliev1353.digitalforwarder.ui.activity.reg.RegisterActivity
 
 class OnBoardAdapter : RecyclerView.Adapter<OnBoardAdapter.BoardViewHolder>() {
 
     private val img = listOf(
-        R.drawable.hello_world
+        R.drawable.hello_world,
+        R.drawable.pinguin
     )
 
     private val title = listOf(
         "Добро пожаловать",
-        "Title 2",
+        "Приятный интеряейс ждёт вас",
         "Title 3",
     )
 
     private val desc = listOf(
-        "Admin",
-        "Description 2",
+        "Hello world ! ",
+        "Быстрая навигатся с помощь Bottom Nav",
         "Description 3",
     )
 

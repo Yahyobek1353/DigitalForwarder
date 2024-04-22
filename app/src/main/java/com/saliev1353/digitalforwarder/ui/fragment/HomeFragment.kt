@@ -5,23 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.saliev1353.digitalforwarder.R
 import com.saliev1353.digitalforwarder.data.model.home.CategoryDto
 import com.saliev1353.digitalforwarder.data.model.home.FilialDto
 import com.saliev1353.digitalforwarder.databinding.FragmentHomeBinding
 import com.saliev1353.digitalforwarder.ui.other.adapter.category.CategoryAdapter
 import com.saliev1353.digitalforwarder.ui.other.adapter.filial.FilialsAdapter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment() {
     private val binding : FragmentHomeBinding by lazy{
         FragmentHomeBinding.inflate(layoutInflater)
@@ -43,7 +33,7 @@ class HomeFragment : Fragment() {
         FilialDto( "Faberlic"),
     )
 
-    val categoryList = listOf(
+    private val categoryList = listOf(
         CategoryDto("Напитки"),
         CategoryDto("Малочная продукция"),
         CategoryDto("Мясное"),
@@ -71,8 +61,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
         return binding.root
     }
 

@@ -1,5 +1,6 @@
 package com.saliev1353.digitalforwarder.ui.other.adapter.report
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -25,11 +26,12 @@ class ReportAdapter : ListAdapter<PriceDto, ReportAdapter.ReportViewHolder>(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ReportAdapter.ReportViewHolder {
+    ): ReportViewHolder {
         return  ReportViewHolder(ItemReportBinding.inflate(LayoutInflater.from(parent.context) , parent , false))
     }
 
-    override fun onBindViewHolder(holder: ReportAdapter.ReportViewHolder, position: Int) {
+    @SuppressLint("SuspiciousIndentation")
+    override fun onBindViewHolder(holder: ReportViewHolder, position: Int) {
       val model = getItem(position)
         holder.onBind(model)
     }
